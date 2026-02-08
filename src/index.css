@@ -1,0 +1,33 @@
+/* នាំយកពុម្ពអក្សរ Kantumruy Pro ពី Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* កំណត់ Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* កំណត់ Font ឱ្យដើរពេញមួយ App តែម្តង */
+body {
+  font-family: 'Kantumruy Pro', sans-serif;
+}
+
+/* លាក់ Scrollbar ប៉ុន្តែនៅអាចអូសបាន (សម្រាប់ Menu ខាងលើ) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* បង្កើតចលនាអក្សររត់ (Marquee) */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite; /* បន្ថែមដើម្បីធានាថាវាបង្ហាញត្រឹមត្រូវ */
+}
